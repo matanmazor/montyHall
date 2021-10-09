@@ -5,7 +5,7 @@ for i =1:10000%choose car location
     car_loc = randperm(3,1);
     %choose random door
     rand_door = randperm(3,1);
-    %host opens a door that is either the car_loc or the rand_door
+    %host opens a door that is neither the car_loc or the rand_door
     possible_doors = 1:3;
     possible_doors = possible_doors(possible_doors~=car_loc & possible_doors~=rand_door);
     goat_door = possible_doors(randperm(length(possible_doors),1));
